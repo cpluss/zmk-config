@@ -51,25 +51,6 @@
 #define SYMBOLS 1
 #define FNUM 2
 
-// Layer access
-#define LA_SYM &mo SYMBOLS
-#define LA_FNUM &mo FNUM
-
-// Custom behaviors
-#define OS_SHFT &sk LSHFT
-#define OS_CTRL &sk LCTRL
-#define OS_ALT &sk LALT
-#define OS_CMD &sk LGUI
-
-// Mouse keys
-#define M_SWU &mwh 1
-#define M_SWD &mwh -1
-#define M_SWL &mwh -1
-#define M_SWR &mwh 1
-#define M_RHT &mbtn R
-#define M_LFT &mbtn L
-#define M_MDL &mbtn M
-
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -95,8 +76,8 @@
         fnum_layer {
             bindings = <
                 &kp N1      &kp N2        &kp N3          &kp N4       &kp N5       &kp N6       &kp N7       &kp N8       &kp N9       &kp N0
-                &OS_CMD     &OS_ALT       &OS_SHFT        &OS_CTRL     &mkp MCLK    &kp DEL      &kp LEFT     &kp UP       &kp DOWN     &kp RIGHT
-                &none       &msc SCRL_UP  &msc SCRL_DOWN  &mkp RCLK    &mkp LCLK    &kp BSPC     &kp DEL      &none       &none      &none
+                &sk LGUI    &sk LALT      &sk LSHFT       &sk LCTRL    &mkp MCLK    &kp DEL      &kp LEFT     &kp UP       &kp DOWN     &kp RIGHT
+                &none       &msc SCRL_UP  &msc SCRL_DOWN  &mkp RCLK    &mkp LCLK    &kp BSPC     &kp DEL      &none        &none        &none
                                           &none           &none        &trans       &none        &kp TAB      &kp N0
             >;
         };
