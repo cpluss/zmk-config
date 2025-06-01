@@ -87,7 +87,7 @@
         symbols_layer {
             bindings = <
                 SE_LCBR  SE_RCBR  SE_LBRC  SE_RBRC  SE_DLR   SE_PLUS  SE_QUES  SE_AMPR  SE_LESS  SE_MORE
-                SE_SEMI  SE_SLSH  SE_LPRN  SE_RPRN  SE_PIPE  COMM     SE_CIRC  SE_HASH  SE_DQUO  SE_TILD
+                SE_SEMI  SE_SLSH  SE_LPRN  SE_RPRN  SE_PIPE  COMMA    SE_CIRC  SE_HASH  SE_DQUO  SE_TILD
                 SE_COL   SE_EQAL  SE_AT    SE_EXCL  SE_BSLH  SE_PERC  SE_GRAV  SE_QUO   SE_ASTR  SE_USC
                 SE_USC   SE_MINS  SE_USC            NONE     TRANS    NONE
             >;
