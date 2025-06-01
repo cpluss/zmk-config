@@ -1,0 +1,105 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/ext_power.h>
+
+// Swedish letters and symbols
+#define SE_AA LBKT
+#define SE_AE SQT
+#define SE_OE SEMI
+#define SE_QUO BSLH
+#define SE_COL LS(DOT)
+#define SE_SEMI LS(COMM)
+#define SE_EXCL LS(N1)
+#define SE_DQUO LS(N2)
+#define SE_HASH LS(N3)
+#define SE_PERC LS(N5)
+#define SE_AMPR LS(N6)
+#define SE_SLSH LS(N7)
+#define SE_LPRN LS(N8)
+#define SE_RPRN LS(N9)
+#define SE_EQAL LS(N0)
+#define SE_CIRC LS(RBKT)
+#define SE_AT RA(N2)
+#define SE_DLR RA(N4)
+#define SE_LCBR LS(RA(N8))
+#define SE_LBRC RA(N8)
+#define SE_RBRC RA(N9)
+#define SE_RCBR LS(RA(N9))
+#define SE_TILD RA(RBKT)
+#define SE_DIAE RBKT
+#define SE_ACUT EQUAL
+#define SE_MINS FSLH
+#define SE_GRAV PLUS
+#define SE_LESS NUBS
+#define SE_MORE LS(NUBS)
+#define SE_PLUS MINUS
+#define SE_ASTR LS(BSLH)
+#define SE_QUES LS(MINUS)
+#define SE_BSLH LS(RA(N7))
+#define SE_PIPE RA(N7)
+#define SE_USC LS(FSLH)
+
+// Layer names
+#define SVORAK 0
+#define SYMBOLS 1
+#define FNUM 2
+
+// Layer access
+#define LA_SYM &mo SYMBOLS
+#define LA_FNUM &mo FNUM
+
+// Custom behaviors
+#define OS_SHFT &sk LSHFT
+#define OS_CTRL &sk LCTRL
+#define OS_ALT &sk LALT
+#define OS_CMD &sk LGUI
+
+// Mouse keys
+#define M_SWU &mwh 1
+#define M_SWD &mwh -1
+#define M_SWL &mwh -1
+#define M_SWR &mwh 1
+#define M_RHT &mbtn R
+#define M_LFT &mbtn L
+#define M_MDL &mbtn M
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        svorak_layer {
+            bindings = <
+                SE_AA    SE_AE    SE_OE    P       Y       F       G       C       R       L
+                A        O        E        U       I       D       H       T       N       S
+                DOT      Q        J        K       X       B       M       W       V       Z
+                ESC      LSHFT    LA_FNUM                  ENTER   SPACE   LA_SYM
+            >;
+        };
+
+        symbols_layer {
+            bindings = <
+                SE_LCBR  SE_RCBR  SE_LBRC  SE_RBRC  SE_DLR   SE_PLUS  SE_QUES  SE_AMPR  SE_LESS  SE_MORE
+                SE_SEMI  SE_SLSH  SE_LPRN  SE_RPRN  SE_PIPE  COMM     SE_CIRC  SE_HASH  SE_DQUO  SE_TILD
+                SE_COL   SE_EQAL  SE_AT    SE_EXCL  SE_BSLH  SE_PERC  SE_GRAV  SE_QUO   SE_ASTR  SE_USC
+                SE_USC   SE_MINS  SE_USC            NONE     TRANS    NONE
+            >;
+        };
+
+        fnum_layer {
+            bindings = <
+                N1       N2       N3       N4       N5       N6       N7       N8       N9       N0
+                OS_CMD   OS_ALT   OS_SHFT  OS_CTRL  M_MDL    DEL      LEFT     UP       DOWN     RIGHT
+                NONE     M_SWU    M_SWD    M_RHT    M_LFT    BSPC     DEL      M_SWU    M_SWD    M_SWR
+                NONE     NONE     TRANS                      NONE     TAB      N0
+            >;
+        };
+    };
+}; 
