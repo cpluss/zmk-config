@@ -14,9 +14,9 @@
 #define SE_AA LBKT
 #define SE_AE SQT
 #define SE_OE SEMI
-#define SE_QUO BSLH
+#define SE_QUO BACKSLASH
 #define SE_COL LS(DOT)
-#define SE_SEMI LS(COMM)
+#define SE_SEMI LS(COMMA)
 #define SE_EXCL LS(N1)
 #define SE_DQUO LS(N2)
 #define SE_HASH LS(N3)
@@ -36,16 +36,16 @@
 #define SE_TILD RA(RBKT)
 #define SE_DIAE RBKT
 #define SE_ACUT EQUAL
-#define SE_MINS FSLH
+#define SE_MINS SLASH
 #define SE_GRAV PLUS
 #define SE_LESS NUBS
 #define SE_MORE LS(NUBS)
 #define SE_PLUS MINUS
-#define SE_ASTR LS(BSLH)
+#define SE_ASTR LS(BACKSLASH)
 #define SE_QUES LS(MINUS)
 #define SE_BSLH LS(RA(N7))
 #define SE_PIPE RA(N7)
-#define SE_USC LS(FSLH)
+#define SE_USC LS(SLASH)
 
 // Layer names
 #define SVORAK 0
@@ -77,28 +77,28 @@
 
         svorak_layer {
             bindings = <
-                SE_AA    SE_AE    SE_OE    P       Y       F       G       C       R       L
-                A        O        E        U       I       D       H       T       N       S
-                DOT      Q        J        K       X       B       M       W       V       Z
-                ESC      LSHFT    LA_FNUM                  ENTER   SPACE   LA_SYM
+                &kp SE_AA    &kp SE_AE    &kp SE_OE    &kp P       &kp Y       &kp F       &kp G       &kp C       &kp R       &kp L
+                &kp A        &kp O        &kp E        &kp U       &kp I       &kp D       &kp H       &kp T       &kp N       &kp S
+                &kp DOT      &kp Q        &kp J        &kp K       &kp X       &kp B       &kp M       &kp W       &kp V       &kp Z
+                &kp ESC      &sk LSHFT    &mo FNUM                 &kp ENTER   &kp SPACE   &mo SYMBOLS
             >;
         };
 
         symbols_layer {
             bindings = <
-                SE_LCBR  SE_RCBR  SE_LBRC  SE_RBRC  SE_DLR   SE_PLUS  SE_QUES  SE_AMPR  SE_LESS  SE_MORE
-                SE_SEMI  SE_SLSH  SE_LPRN  SE_RPRN  SE_PIPE  COMMA    SE_CIRC  SE_HASH  SE_DQUO  SE_TILD
-                SE_COL   SE_EQAL  SE_AT    SE_EXCL  SE_BSLH  SE_PERC  SE_GRAV  SE_QUO   SE_ASTR  SE_USC
-                SE_USC   SE_MINS  SE_USC            NONE     TRANS    NONE
+                &kp SE_LCBR  &kp SE_RCBR  &kp SE_LBRC  &kp SE_RBRC  &kp SE_DLR   &kp SE_PLUS  &kp SE_QUES  &kp SE_AMPR  &kp SE_LESS  &kp SE_MORE
+                &kp SE_SEMI  &kp SE_SLSH  &kp SE_LPRN  &kp SE_RPRN  &kp SE_PIPE  &kp COMMA    &kp SE_CIRC  &kp SE_HASH  &kp SE_DQUO  &kp SE_TILD
+                &kp SE_COL   &kp SE_EQAL  &kp SE_AT    &kp SE_EXCL  &kp SE_BSLH  &kp SE_PERC  &kp SE_GRAV  &kp SE_QUO   &kp SE_ASTR  &kp SE_USC
+                &kp SE_USC   &kp SE_MINS  &kp SE_USC            &none     &trans    &none
             >;
         };
 
         fnum_layer {
             bindings = <
-                N1       N2       N3       N4       N5       N6       N7       N8       N9       N0
-                OS_CMD   OS_ALT   OS_SHFT  OS_CTRL  M_MDL    DEL      LEFT     UP       DOWN     RIGHT
-                NONE     M_SWU    M_SWD    M_RHT    M_LFT    BSPC     DEL      M_SWU    M_SWD    M_SWR
-                NONE     NONE     TRANS                      NONE     TAB      N0
+                &kp N1      &kp N2        &kp N3          &kp N4       &kp N5       &kp N6       &kp N7       &kp N8       &kp N9       &kp N0
+                &OS_CMD     &OS_ALT       &OS_SHFT        &OS_CTRL     &mkp MCLK    &kp DEL      &kp LEFT     &kp UP       &kp DOWN     &kp RIGHT
+                &none       &msc SCRL_UP  &msc SCRL_DOWN  &mkp RCLK    &mkp LCLK    &kp BSPC     &kp DEL      &none       &none      &none
+                                          &none           &none        &trans       &none        &kp TAB      &kp N0
             >;
         };
     };
