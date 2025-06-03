@@ -58,7 +58,7 @@
     conditional_layers {
         compatible = "zmk,conditional_layers";
         tri_layer {
-            if-layers = <FNUM SVORAK>;
+            if-layers = <SYMBOLS FNUM>;
             then-layer = <COMBO>;
         };
     };
