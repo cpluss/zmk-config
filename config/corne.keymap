@@ -80,7 +80,7 @@
                 &none &kp SE_LCBR  &kp SE_RCBR  &kp SE_LBRC  &kp SE_RBRC  &kp SE_DLR   &kp SE_PLUS  &kp SE_QUES  &kp SE_AMPR  &kp SE_LESS  &kp SE_MORE &none
                 &none &kp SE_SEMI  &kp SE_SLSH  &kp SE_LPRN  &kp SE_RPRN  &kp SE_PIPE  &kp COMMA    &kp SE_CIRC  &kp SE_HASH  &kp SE_DQUO  &kp SE_TILD &none
                 &none &kp SE_COL   &kp SE_EQAL  &kp SE_AT    &kp SE_EXCL  &kp SE_BSLH  &kp SE_PERC  &kp SE_GRAV  &kp SE_QUO   &kp SE_ASTR  &kp SE_USC &none
-                &kp SE_USC   &kp SE_MINS  &kp SE_USC            &none     &trans    &none
+                &kp SE_USC   &kp SE_MINS  &trans            &none     &none    &trans
             >;
         };
 
@@ -89,7 +89,7 @@
                 &none &kp N1      &kp N2        &kp N3          &kp N4       &kp N5       &kp N6       &kp N7       &kp N8       &kp N9       &kp N0 &none
                 &none &sk LGUI    &sk LALT      &sk LSHFT       &sk LCTRL    &mkp MCLK    &kp DEL      &kp LEFT     &kp UP       &kp DOWN     &kp RIGHT &none
                 &none &none       &msc SCRL_UP  &msc SCRL_DOWN  &mkp RCLK    &mkp LCLK    &kp BSPC     &kp DEL      &none        &none        &none &none
-                                          &bt BT_CLR           &none        &trans       &none        &kp TAB      &bt BT_NXT
+                                          &bt BT_CLR           &none        &trans       &none        &kp TAB      &trans
             >;
         };
 
